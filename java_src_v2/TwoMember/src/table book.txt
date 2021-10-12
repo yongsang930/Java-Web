@@ -1,0 +1,243 @@
+
+create table Customer(
+	name varchar2(50)primary key,
+	addr varchar2(50)not null,
+	tel varchar2(50) not null
+	)
+	
+create table book(
+	id  varchar2(50)primary key,
+    author varchar2(50)not null ,  --저자
+	title varchar2(50) not null,  --책 제목
+	publisher varchar2(50) not null,-- 출판사 
+	price number not null -- 가격 
+);
+
+
+테이블 명 : Customer
+컬럼 :   name     자료형 :  varchar2(50)   제약조건 :  primary key
+컬럼 :   addr       자료형 :  varchar2(50)   제약조건 :  not null
+컬럼 :   tel         자료형 :  varchar2(50)   제약조건 :  not null
+
+
+
+프로젝트 명 : TwoMember
+
+패키지 : vo 
+클래스 : BookVO
+           Customer
+
+
+패키지 : service
+interface : Dao
+클래스 :  BookDAO
+           BookService
+
+
+interface : Dao2
+클래스 :  CusDAO
+            CustomerService
+
+
+
+패키지 : test
+메  인  :  TestCusBooService
+
+
+상세설명 
+
+패키지 : vo 
+
+BookVO : 문자열 변수 ( id, title,author, publisher)
+             정수형 변수  price  
+             생성자  set/get , toString() 
+
+
+Customer : 문자열 변수(name, addr, tel)
+               생성자  set/get , toString() 
+
+
+패키지 : service
+interface : Dao에서 BookDAO클래스에 메서드 상속 
+메서드 명 : 
+              void con(); 
+	 void discon();
+	 void bookinsert(BookVO b);
+	 BookVO bookselect(String id) ;
+	 void bookupdate(BookVO b);
+	 void bookdelete(String id) ;
+	 ArrayList bookselectAll();
+
+
+
+클래스 : BookDAO
+
+메서드 : void bookinsert(BookVO b); 
+          "insert into book values(?,?,?,?,?)"; 
+
+ BookVO bookselect(String id) ;
+ "select * from book where id=?";
+
+
+  void bookupdate(BookVO b);
+ "update book set title=?, author=?,publisher=?, price=? where id=?";
+
+  void bookdelete(String id) ;
+ "delete book where id=?";
+
+  ArrayList bookselectAll();
+ "select * from book ";
+
+
+클래스 : BookService
+변수 : dao
+
+생성자 :  BookDAO의 객체 생성 
+
+메서드 : public void insert(BookVO b) 
+           public void printAll()
+           public BookVO findbook(String id)
+           public void deletebook(String id)
+           public void updatebook(BookVO b)
+
+
+interface : Dao2에서  CusDAO클래스에 메서드 상속 
+메서드명 : void con(); 
+	 void discon();
+	 void Cusinsert(Customer b);
+	 Customer Cusselect(String id) ;
+	 void Cusupdate(Customer b);
+	 void Cusdelete(String name) ;
+	 ArrayList CusselectAll();
+
+클래스 :  CusDAO
+메서드명 : void Cusinsert(Customer b);
+	"insert into Customer values(?,?,?)";
+
+            Customer Cusselect(String id) ;
+	"select * from Customer where name=?";
+
+
+             void Cusupdate(Customer b);
+	"update Customer set addr=?, tel=? where name=?";
+
+             void Cusdelete(String name) ;
+	"delete Customer where name=?";
+
+
+             ArrayList CusselectAll();
+            "select * from Customer ";
+
+
+클래스 :  CustomerService
+
+     변수 : dao
+
+생성자 :  CusDAO의 객체 생성 
+
+
+메서드명 : public void insert(Customer b)
+              public void printAll()
+              public Customer findbook(String name) 
+              public void deletebook(String name)
+              public void updatebook(Customer b)
+
+
+패키지 : test
+메  인  :  TestCusBooService
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		boolean flag=true;
+		boolean flag1=true;		
+		boolean flag2=true;
+		int menu2=0;
+		String id;
+		String title;
+		String author;
+		String publisher;
+		int price;
+		
+		CustomerService ser = new CustomerService();
+		BookService service = new BookService();
+        
+		
+		while(flag1){
+			System.out.println("1.고객 2.책");
+			int menu1 = sc.nextInt();
+			switch(menu1){
+			case 1:
+				while(flag2){
+					System.out.println("1.등록 2.검색 3.전체출력 4.삭제, 5.수정");
+					menu2 = sc.nextInt();
+					switch(menu2){
+					case 1:
+														
+							break;
+						case 2:
+							
+							break;
+						
+						case 3: 
+							
+							break;
+						
+						case 4: 
+							
+							break;
+						case 5:
+							
+						
+						case 6 :
+							
+						
+						
+						}
+				}
+				break;
+						
+			case 2:
+				while(flag2){
+					System.out.println("1.책등록 2.검색");
+					menu2 = sc.nextInt();
+					switch(menu2){
+					case 1:
+						
+						break;
+					case 2:
+						
+
+						
+						break;
+						
+					case 3:
+						
+					   break;
+					
+					case 4:
+					
+					break;
+					
+					case 5:
+						
+				        break; 
+					case 6:
+						flag=false; 
+					    break; 
+					    
+					}
+				}
+				break;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
