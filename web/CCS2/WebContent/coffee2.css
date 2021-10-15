@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+h1, p{
+	font-family: self;
+	color: black;
+	
+}
+
+h1{
+	border-bottom: 1px solid gray;
+	color: red;
+	
+}
+
+p.first{color: green;}
+p.second{color:blue;}
