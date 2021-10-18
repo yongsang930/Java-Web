@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>쇼핑 카트</title>
+    <style>
+      body {
+        background-color: ivory;
+        height: 100%;
+      }
+      table {
+        width: 600px;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      caption {
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <table border="1">
+        <caption>
+          <h2>shopping cart</h2>
+        </caption>
+        <tr>
+          <th>품목</th>
+          <th>가격</th>
+          <th>수량</th>
+          <th>합계</th>
+        </tr>
+        <tr>
+          <td>컴퓨터 세트</td>
+          <td>200,000,000원</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td><input type="text" size="6" value="0" /></td>
+        </tr>
+        <tr>
+          <td>티셔츠 세트</td>
+          <td>100,000원</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td><input type="text" size="6" value="0" /></td>
+        </tr>
+        <tr>
+          <td>피규어 세트</td>
+          <td>120,000원</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td><input type="text" size="6" value="0" /></td>
+        </tr>
+        <tr>
+          <td>홍어 세트</td>
+          <td>3,000원</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td><input type="text" size="6" value="0" /></td>
+        </tr>
+        <tr>
+          <td>뮤직 세트</td>
+          <td>1,700원</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td><input type="text" size="6" value="0" /></td>
+        </tr>
+        <tr>
+          <td>무비 세트</td>
+          <td>170,000원</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td><input type="text" size="6" value="0" /></td>
+        </tr>
+      </table>
+      <p>
+        <button>계산</button>
+        <button type="submit">구매</button>
+        <button type="reset">초기화</button>
+      </p>
+    </form>
+    <a href="index.html">Back to the Home</a>
+  </body>
+</html>
