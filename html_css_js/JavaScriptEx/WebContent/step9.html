@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript">
-	computerNumber
-	nGuesses
 
-	var computerNumber = 53;
-	var nGuesses = 0;
+<script>
+var computerNumber =53; //Á¤´ä 
+var nGuesses=0;  //ÃßÃøÈ½¼ö 
 
-	function guess() {
-		var result = "";
-
-		var number = parseInt(document.getElementById("user").value);
-		nGuesses++;
+function guess(){
+ var result="";  //°á°ú ¸Ş½ÃÁö 	
 	
-	if(number==computerNumber) result = "ì„±ê³µì…ë‹ˆë‹¤";
-	else if(number<computerNumber) result = "ë‚®ìŠµë‹ˆë‹¤."
-	else result = "ë†’ìŠµë‹ˆë‹¤."
-	
-	document.getElementById("result").value = result;
-	document.getElementById("guesses").value = nGuesses;
-	return true;
-	}
+   //»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ¹Ş¾Æ¼­ º¯¼ö number¿¡ ´ëÀÔÇÑ´Ù. 
+   var number=parseInt(document.getElementById("user").value);
+   nGuesses++; 
+
+   if(number==computerNumber) result="¼º°øÀÔ´Ï´Ù."; 
+   else if(number <computerNumber) result="³·½À´Ï´Ù."
+   else result="³ô½À´Ï´Ù."; 
+   
+   document.getElementById("result").value=result; 
+   document.getElementById("guesses").value=nGuesses; 
+   return true; 
+}
+
 </script>
+
+
 </head>
 <body>
 
-	<h2>ìˆ«ì ë§ì¶”ê¸° ê²Œì„</h2>
-	ì´ ê²Œì„ì€ ì»´í“¨í„°ê°€ ìƒì„±í•œ ìˆ«ìë¥¼ ë§ì¶”ëŠ” ê²Œì„ì…ë‹ˆë‹¤. ìˆ«ìëŠ” 1~100 ì‚¬ì´ì— ìˆìŠµë‹ˆë‹¤.
 
-	<form action="">
+<h2>¼ıÀÚ ¸ÂÃß±â °ÔÀÓ</h2>
+ÀÌ °ÔÀÓÀº ÄÄÇ»ÅÍ°¡ »ı¼ºÇÑ ¼ıÀÚ¸¦ ¸ÂÃß´Â °ÔÀÓÀÔ´Ï´Ù. ¼ıÀÚ´Â 1ºÎÅÍ 100 »çÀÌ¿¡ ÀÖ½À´Ï´Ù. 
 
-		ìˆ«ì:<input type="text" id="user" size="5"> <input type="button"
-			value="í™•ì¸" onclick="guess()" /> ì¶”ì¸¡íšŸìˆ˜: <input type="text"
-			id="guesses"> íŒíŠ¸: <input type="text" id="result" />
-
-	</form>
+ <form>
+        ¼ıÀÚ:
+        <input type="text" id="user" size="5">
+        <input type="button" value="È®ÀÎ" onclick="guess();">
+        ÃßÃøÈ½¼ö:
+        <input type="text" id="guesses" size="5">
+        ÈùÆ®:
+        <input type="text" id="result" size="16">
+    </form>
 
 </body>
 </html>

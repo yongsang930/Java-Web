@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
-</head>
-<script type="text/javascript">
-	function calc() {
-		var x = document.getElementById("x").value;
-		var y = document.getElementById("y").value;
-		var sum = parseInt(x) + parseInt(y);
-		document.getElementById("sum").value = sum;
+<script>
 
-	}
+function calc(){
+	
+	var x=document.getElementById("x").value; 
+	var y=document.getElementById("y").value; 
+	
+	var sum; 
+	sum=parseInt(x)+parseInt(y);
+	document.getElementById("sum").value=sum; 
+	
+}
+
+
+
 </script>
+
+
+
+
+</head>
 <body>
-	<h3>ë§ì…ˆê³„ì‚°ê¸°</h3>
-	<form action="...." name="myform" method="post">
-		ì²«ë²ˆì§¸ ì •ìˆ˜: <input id="x" /> <br> ë‘ë²ˆì§¸ ì •ìˆ˜: <input id="y" /> <br>
-		í•©ê³„: <input id="sum" /> <br> <input type="button" value="ê³„ì‚°"
-			onclick="calc()">
+<h3>µ«¼À°è»ê±â</h3>
+<form name="myform" action ="...." method="post">
+Ã¹ ¹øÂ° Á¤¼ö : 
+<input id="x"/><br/>
+µÎ¹øÂ° Á¤¼ö : 
+<input id="y"/><br/>
+ÇÕ°è : 
+<input id="sum"/><br/>
+<input type="button" value="°è»ê" onclick="calc()">
+ 
 
 
-	</form>
+</form>
+
+
 </body>
 </html>

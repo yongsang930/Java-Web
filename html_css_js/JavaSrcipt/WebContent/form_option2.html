@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function changeList(form){
+	if(form.restaurant.selectedIndex==0){
+		form.menu.length=3; 
+		form.menu[0].text="짜장면";
+		form.menu[1].text="짬봉";
+		form.menu[2].text="탕슉";
+	} else {
+		form.menu.length=4; 
+		form.menu[0].text="라면";
+		form.menu[1].text="떡라면";
+		form.menu[2].text="만두라면";
+		form.menu[3].text="떡만두라면";
+	}
+	 form.menu.selectedIndex=0; 
+	
+}
+
+
+</script>
+
+
+</head>
+<body>
+<form>
+    <select name="restaurant" onChange="changeList(this.form)">
+        <option selected>중국집
+        <option>분식집
+    </select>
+    <select name="menu">
+        <option selected>짜장면
+        <option>짬뽕
+        <option>탕슉
+    </select>
+</form>
+</body>
+</html>

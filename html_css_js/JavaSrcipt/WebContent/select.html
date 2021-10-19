@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script>
+function createOption() {
+	var sel=document.getElementById("star");
+	sel[0]=new Option("아이유","iyou");
+	sel[1]=new Option("싸이","psy");
+	sel[2]=new Option("백박사","baek");
+	
+}
+function delOption(){
+	var sel=document.getElementById("star"); 
+	sel.length=0; 
+	
+}
+function showValue(){
+	var sel=document.getElementById("star");
+	alert(sel.value); 
+	
+} 
+
+</script>
+
+</head>
+<body>
+
+<select id="star" onchange="showValue()"></select>
+<input type="button" value="옵션생성" onclick="createOption()">
+<input type="button" value="옵션삭제" onclick="delOption()">
+ 
+
+
+</body>
+</html>

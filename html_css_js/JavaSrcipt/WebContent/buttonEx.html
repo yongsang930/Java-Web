@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+var clickCount=0; 
+function umm(form){
+	if(clickCount==0)
+		form.but_1.value="누른다고 진짜 누르냐?"; 
+	else if(clickCount==1)
+		form.but_1.value="메롱 :p";
+	else if(clickCount==2)
+		form.but_1.value="그만눌러";
+	else if(clickCount==3)
+		form.but_1.value="바보아냐?";
+	else 
+		form.but_1.value="그만할래? 잼 없어";
+	
+	clickCount++; 
+}
+
+
+</script>
+
+
+</head>
+<body>
+다음의 버튼을 눌려보세요 
+<form>  
+<input type="button" name="but_1" value="눌러봐" onclick="umm(this.form);">
+
+ </form>
+
+</body>
+</html>

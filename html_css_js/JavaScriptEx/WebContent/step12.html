@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body>
 
-<script type="text/javascript">
-
-a=new Array(5);
-sum= 0;
-for ( i = 0; i < 5; i++) {
-	a[i] = parseInt(prompt("0ë³´ë‹¤ í° ìˆ«ìžë¥¼ ìž…ë ¥í•˜ë¼","1"));
-	document.write("a["+i+"]="+a[i]+"<br>");
-	sum += a[i];
+<script>
+a=new Array(5); 
+max=0; 
+for(i=0; i<5; i++){
+	a[i]=parseInt(prompt("0º¸´Ù Å« ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¶ó","1"));
+	document.write("a["+i+"]="+a[i]+"<br>"); 
 }
 
-document.write("max="+sum+"<br><br>");
-</script>
+  for(i=0; i<5; i++){
+	  if(max<a[i])
+		  max=a[i]; 
+  }
+document.write("max="+max+"<br><br>");
 
+
+b=new Array(5); 
+sum=0; 
+for(i=0;i<5; i++)
+	b[i]=parseInt(prompt("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¶ó","1"));
+for(i=0; i<5;i++){
+	sum+=b[i];
+	document.write("sum="+sum); 
+}	
+
+
+</script>
 </body>
 </html>

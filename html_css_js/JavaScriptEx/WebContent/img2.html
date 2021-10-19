@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+
+pos=1; 
+t=null; 
+
+function next(){
+	pos++; 
+	if(pos>5){
+	   alert("끝");
+	   pos=5; 
+	}else {
+		document.i1.src=pos+".jpg"; 
+	}
+}
+
+function back(){
+	pos--; 
+	if(pos<1){
+		alert("끝");
+		pos=1; 
+	} else {
+		document.i1.src=pos+".jpg"; 
+	}
+}
+
+function slide(){
+	pos++; 
+	time=document.f.s.options[document.f.s.selectedIndex].value;
+	if(pos>5)
+		pos=1; 
+	document.i1.src=pos+".jpg";
+	
+	t=setTimeout("slide()",time); 
+	
+}
+
+
+function stop(){
+	clearTimeout(t);
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+<form method=post action="" name=f>
+<table border ="1">
+
+<tr><TD colspan=5><img src=1.jpg name=i1 width=520 height=300></td></tr>
+
+<tr>
+<td><input type="button" value="이전" onclick="back()">  </td>
+<td><input type="button" value="다음" onclick="next()">  </td>
+<td><input type="button" value="슬라이드시작" onclick="slide()">  </td>
+<td><select name="s"> 
+    <option value=1000 selected>1</option>
+    <option value=2000>2</option>
+    <option value=3000>3</option>
+     <option value=4000>4</option>
+  </select></td>
+
+<td><input type="button" value="슬라이드멈춤" onclick="stop()">  </td>
+
+
+</tr>
+
+
+</table>
+
+
+
+
+</form>
+
+
+
+
+</body>
+</html>

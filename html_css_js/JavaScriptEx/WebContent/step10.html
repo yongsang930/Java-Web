@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body>
-	<script type="text/javascript">
-		var grade = promt("성적을 입력하시오 :", "A~F사이의 문자로");
-		switch (grade) {
-		case 'A':
-			alert("잘했어요")
-			break;
-		case 'B':
-			alert("그냥 잘했어요")
-			break;
-		case 'C':
-			alert("중간")
-			break;
-		case 'D':
-			alert("못했어요")
-			break;
-		case 'F':
-			alert("낙제")
-			break;
+<script>
+    var grade = prompt("성적을 입력하시오:", "A-F사이의 문자로");
+    switch (grade) {
+        case 'A': alert("잘했어요!");
+            break;
+        case 'B': alert("좋은 점수군요");
+            break;
+        case 'C': alert("괜찮은 점수군요");
+            break;
+        case 'D': alert("좀더 노력하세요");
+            break;
+        case 'F': alert("다음학기 수강하세요");
+            break;
+        default: alert("알수없는 학점입니다.")
+    }
 
-		default:
-			alert("알수없음");
-		}
-	</script>
+
+
+</script>
 </body>
 </html>

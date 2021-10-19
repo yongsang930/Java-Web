@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+
+function deposit(){
+	var moneyTxt=document.bankForm.money;
+	var flag=window.isNaN(moneyTxt.value);
+	if(moneyTxt.value==""){//공란은 0과동일
+		alert("액수를 기재하세요");
+	}else if(flag){
+		alert("숫자를 넣으라고!!!");
+	}else	if(moneyTxt.value<=0){
+		alert("입금액은 0원을 초과해야 합니다.");
+	}else{
+		alert(moneyTxt.value+"원 입금완료!");
+		
+	}
+	moneyTxt.value="";
+	moneyTxt.focus();
+	
+}
+
+</script>
+
+
+</head>
+<body>
+
+
+액수를 기재하세요 
+숫자를 넣으라고 !!
+0 : 입금액은 0원을 초과해야 합니다 
+정상 입력 : "원 입금완료  " 
+alert를 이용해 출력 
+
+
+입금시 유의 사항: <br>입금액은 0원을 초과해야 합니다.<br>
+				  입금액은 숫자로 표기해야 합니다.<br>
+				  입금액에 반드시 액수를 기재해야 합니다.<br>
+입금 메세지 : 100원 입금완료!<br>
+<form method="get"action=""name="bankForm">
+	입금액 : <input type="text"name="money">
+	<input type="button"value="입금"onclick="deposit()">
+	</form>
+	<hr>
+
+
+</body>
+</html>

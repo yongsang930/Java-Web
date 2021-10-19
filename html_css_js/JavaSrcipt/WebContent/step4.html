@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function enter(){
+	flag=confirm("성인 사이트로 이동합니다. 정말 입장하시겠습니까?"); 
+	if(flag==false){//취소 버튼을 눌렀을 때 
+		return false; //false 를 리턴하면 전송 안되게 한다. 
+	}
+}
+</script>
+
+</head>
+<body>
+<form method="get" action ="" onsubmit="return enter()">
+<!--  onsubmit: submit 버튼 눌렀을때 동작
+ onsubmit="return xxx()" return keyword를 삽입하는 이유는 
+ javascript function에서 return false를 했을때 전송시키지 않기 위해 추가된다. -->
+<input type ="button" value="그냥버튼"><br>
+
+<!-- submit : form에서 지정한 action 경로로 데이터가 전송된다. -->
+<input type ="submit" value="전송버튼"><br>
+
+
+</form>
+
+
+
+</body>
+</html>

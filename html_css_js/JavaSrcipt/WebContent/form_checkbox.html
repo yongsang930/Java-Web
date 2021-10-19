@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+var costJjajang = 2600;
+var costJjambbong = 2800;
+var costTangshoock = 10000;
+
+function calculate(form, callingField) {
+    if (callingField == "total") {
+        alert("바가지는 적당히...");
+    } else {
+        cost = 0;
+        if (form.jjajang.checked)
+            cost += costJjajang;
+        if (form.jjambbong.checked)
+            cost += costJjambbong;
+        if (form.tangshoock.checked)
+            cost += costTangshoock;
+        form.total.value = cost;
+    }
+}
+</script>
+
+</head>
+<body>
+<form>
+
+주문사항:<BR><BR>
+<INPUT TYPE="checkbox" NAME="jjajang"
+       onClick="calculate(this.form, this.name);">짜장면
+<BR>
+<INPUT TYPE="checkbox" NAME="jjambbong"
+       onClick="calculate(this.form, this.name);">짬뽕
+<BR>
+<INPUT TYPE="checkbox" NAME="tangshoock"
+       onClick="calculate(this.form, this.name);">탕슉
+<BR>
+<HR>
+합계: <INPUT TYPE="text" NAME="total" VALUE=0
+             onChange="calculate(this.form, this.name);">
+</FORM>
+</body>
+</html>
