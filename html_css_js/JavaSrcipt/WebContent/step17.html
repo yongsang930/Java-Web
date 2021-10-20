@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function createTable() {
+		let table = "<table border=1>";
+		table += "<tr><td>아이유</td></tr>";
+		table += "<tr><td>김예솔</td></tr>";
+		table += "<tr><td>임은영</td></tr>";
+		table += "</table>";
+		document.getElementById("tableView").innerHTML = table;
+	}
+
+	function clearTable() {
+		document.getElementById("tableView").innerHTML = "";
+	}
+
+	function createTbody() {
+		document.getElementById("td").innerHTML = "<tr><td>아이유</td><td>11</td></tr>";
+	}
+	function clearTbody() {
+		document.getElementById("td").innerHTML = "";
+	}
+</script>
+</head>
+<body>
+	case1:
+	<button onclick="createTable()">create</button>
+	<button onclick="clearTable()">clear</button>
+	<span id="tableView"></span>
+	<hr>
+
+	case2:
+	<br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>나이</th>
+			</tr>
+		</thead>
+		<tbody id="td"></tbody>
+		<tfoot>
+			<tr>
+				<td>
+					<button onclick="createTbody()">create</button>
+				</td>
+				<td>
+					<button onclick="clearTbody()">clear</button>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function deleteStar() {
+		let starTxt = document.f1.star;
+
+		let flag = confirm(starTxt.value + "저장하시겠습니까?");
+
+		if (flag === false){false}
+			
+		else {
+			starTxt.value = "";
+			starTxt.focus
+			alert("삭제완료")
+		}
+	}
+	
+	function enterSite(){
+		let flag = confirm("사이트로 이동하시겠습니까?");
+		if(flag){
+			location.herf="http://www.daum.net//";
+		}
+	}
+</script>
+</head>
+<body>
+	<form action="" name="f1">
+		<input type="text" name="star">
+		<button onclick="deleteStar()">삭제</button>
+	</form>
+
+	<form action="" name="f1">
+		<button onclick="enterSite()">입장</button>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+const add = (x, y) => x + y;
+const min = (x, y) => x - y;
+const mul = (x, y) => x * y;
+const div = (x, y) => x / y;
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+
+let a = prompt("정수를 입력하세요","0");
+let b = prompt("정수를 입력하세요","0");
+let c = prompt("연산자를 입력하세요","+");
+
+let a_int = parseInt(a);
+let b_int = parseInt(b);
+let result = 0;
+
+
+switch (c) {
+case '+':
+	result = add(a_int,b_int);
+	break;
+case '-':
+	result = min(a_int,b_int);
+	break;
+case '*':
+	result = mul(a_int,b_int);
+	break;
+case '/':
+	result = div(a_int,b_int);
+	break;
+default:
+	alert("부호를 잘못 입력");
+	break;
+}
+
+document.write("result = "+result);
+
+</script>
+</body>
+</html>

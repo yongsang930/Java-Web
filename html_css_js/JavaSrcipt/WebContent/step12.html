@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function radioEx() {
+		let str = document.mf.menu.value;
+
+		if (str === "꽃등심") {
+			alert("꽃등심 주문완룡")
+		} else if (str === "우삼겹") {
+			alert("우삼겹 주문완룡")
+		} else if (str === "우삼겹") {
+			alert("차돌박이 주문완룡")
+		} else{
+			alert("메뉴를 선택하세요")
+		}
+	}
+</script>
+
+</head>
+<body>
+	<form action="" name="mf">
+		<input type="radio" name="menu" value="꽃등심">꽃등심 <br> <input
+			type="radio" name="menu" value="우삼겹">우삼겹 <br> <input
+			type="radio" name="menu" value="차돌박이">차돌박이 <br>
+		<button name="menu" onclick="radioEx()">주문</button>
+	</form>
+</body>
+</html>

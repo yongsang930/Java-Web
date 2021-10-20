@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table{
+text-align: center;
+}
+td {
+	padding: 0;
+	margin: 0;
+	background-color: gray;
+}
+
+button {
+	width: 40;
+	background: none;
+	border-color: none;
+	border-style: none;
+	color: white;
+}
+</style>
+
+
+<script type="text/javascript">
+	let num1;
+	let num2;
+	let op;
+	let re;
+	function str(b) {
+		if (document.form1.result.value == "0")
+			document.form1.result.value = "";
+		document.form1.result.value += b.value;
+	}
+
+	function add(b) {
+		num1 = parseInt(document.form1.result.value);
+		document.form1.result.value = "0";
+		op = b.value;
+	}
+
+	function equal(b) {
+		num2 = parseInt(document.form1.result.value);
+		switch (op) {
+		case '+':
+			result = add(a_int, b_int);
+			break;
+		case '-':
+			result = min(a_int, b_int);
+			break;
+		case '*':
+			result = mul(a_int, b_int);
+			break;
+		case '/':
+			result = div(a_int, b_int);
+			break;
+		default:
+			alert("부호를 잘못 입력");
+			break;
+
+		}
+		document.form1.result.value = re;
+	}
+</script>
+
+</head>
+<body>
+	<form name="form1">
+		<table border=3>
+			<tr>
+				<td colspan="4"><input type="text" name="result" size="20"
+					value="0" style="text-align: right" /></td>
+			</tr>
+			<tr>
+				<td><button name="btn7" onclick="str(this)">7</button></td>
+				<td><button name="btn8" onclick="str(this)">8</button></td>
+				<td><button name="btn9" onclick="str(this)">9</button></td>
+				<td><button name="btnX" onclick="mul(this)">X</button></td>
+			</tr>
+			<tr>
+				<td><button name="btn4" onclick="str(this)">4</button></td>
+				<td><button name="btn5" onclick="str(this)">5</button></td>
+				<td><button name="btn6" onclick="str(this)">6</button></td>
+				<td><button name="btn-" onclick="min(this)">-</button></td>
+			</tr>
+			<tr>
+				<td><button name="btn1" onclick="str(this)">1</button></td>
+				<td><button name="btn2" onclick="str(this)">2</button></td>
+				<td><button name="btn3" onclick="str(this)">3</button></td>
+				<td><button name="btn+" onclick="add(this)">+</button></td>
+			</tr>
+			<tr>
+				<td><button name="btn0" onclick="str(this)">0</button></td>
+				<td><button type="reset" name="btnC" onclick="str(this)">C</button></td>
+				<td><button name="btnDot" onclick="str(this)">.</button></td>
+				<td><button name="btn=" onclick="equal()">=</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

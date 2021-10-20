@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkTest() {
+		let ag = document.f1.angel;
+		for (let i = 0; i < ag.length; i++) {
+			if (ag[i].checked) {
+				str += ag[i].value+" ";
+			}
+		}
+		alert(document.f1.angel.value)
+
+		if (str =="") {
+			alert("당신은 이상형이 없습니다.");
+		} else {
+			alert("당신의 이상형은 " + str);
+		}
+	}
+
+</script>
+
+</head>
+<body>
+	<form name="f1">
+		이상형을 선택하세요<br> <input type="checkbox" name="angel" value="아이유" />아이유<br>
+		<input type="checkbox" name="angel" value="김예솔" />김예솔<br> <input
+			type="checkbox" name="angel" value="강한나" />강한나<br> <input
+			type="checkbox" name="angel" value="임은영" />임은영<br>
+	</form>
+	<button onclick="checkTest()">확인</button>
+</body>
+</html>
