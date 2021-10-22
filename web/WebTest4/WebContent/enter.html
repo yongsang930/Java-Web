@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function idCheck(){
+	var idTxt=document.idForm.id;
+	
+	if(idTxt.value==""){
+		alert("아이디를기재해주세요.");
+		idTxt.value="";
+		idTxt.focus();
+		return false;
+	}
+	var nickTxt=document.idForm.nick;
+	
+	if(nickTxt.value==""){
+		alert("닉네임을기재해주세요.");
+		nickTxt.value="";
+		nickTxt.focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form action="EnterServlet" method="get" name="idForm" onsubmit="return idCheck()">
+	아이디 : <input type="text" name="id"><br>
+	닉네임 : <input type="text" name="nick"><br>
+	<input type="submit" value="입장하기">
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+function checkSelect(){
+	var freindNameTxt=document.selectForm.friend; 
+	if(freindNameTxt.value==""){
+		alert("빈공란이 존재합니다.");
+		freindNameTxt.value=""; 
+		freindNameTxt.focus(); 
+		return false; 
+	}
+}
+</script>
+
+
+
+</head>
+<body>
+<form method="get" action="SelectServlet" name="selectForm" 
+onsubmit="return checkSelect()">
+<select name="friend">
+<option value="">----</option>
+<option value="b">해파리</option>
+<option value="lee">코알라</option>
+<option value="m">팽귄</option>
+
+</select>
+
+<input type="submit" value="동물선택">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="friendForm" action="MapServlet" method="get"
+		onsubmit="return friendCheck()">
+		<input type="radio" name="gender" value="남">남<br> 
+		<input type="radio" name="gender" value="여">여<br> 
+		
+		기수 : <input type="text" name="kosta"><br> 
+		
+		<input type="checkbox" name="friend" value="b">백승석<br> 
+		<input type="checkbox" name="friend" value="lee">민전기<br> 
+		<input type="checkbox" name="friend" value="m">이준우<br> 
+		
+		<input type="checkbox" name="menu" value="피자">피자<br> 
+		<input type="checkbox" name="menu" value="꽃등심">꽃등심<br> 
+		<input type="checkbox" name="menu" value="다금바리">다금바리<br> 
+		
+		
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>
